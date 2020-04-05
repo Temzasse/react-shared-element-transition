@@ -133,10 +133,11 @@ function invert({
   const translate = `translate3d(${translateX}px, ${translateY}px, 0px)`;
   const scale = `scale(${scaleX}, ${scaleY})`;
   const transform = `${translate} ${scale}`;
+  const borderRadiusCorrection = 1 / ((scaleX + scaleY) / 2);
 
   // Invert
   requestAnimationFrame(() => {
-    el.style.borderRadius = firstBorderRadius;
+    el.style.borderRadius = `calc(${firstBorderRadius} * ${borderRadiusCorrection})`;
     el.style.willChange = 'transform';
     el.style.transition = 'none';
     el.style.transformOrigin = opts.transformOrigin;

@@ -9,6 +9,15 @@ export const slideUp = keyframes`
   }
 `;
 
+export const slideDown = keyframes`
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0%);
+  }
+`;
+
 export const slideDownAndFadeIn = keyframes`
   from {
     opacity: 0;

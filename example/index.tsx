@@ -8,6 +8,7 @@ import { galleryItems } from './utils/data';
 import ListToDetails from './list-view';
 import HorizontalScroller from './horizontal-scroller';
 import ImageGallery from './image-gallery';
+import IOSMusicPlayer from './ios-music-player';
 
 const App = () => {
   return (
@@ -28,6 +29,7 @@ const App = () => {
             element={<HorizontalScroller />}
           />
           <Route path="image-gallery/*" element={<ImageGallery />} />
+          <Route path="ios-music-player/*" element={<IOSMusicPlayer />} />
         </Routes>
       </AppWrapper>
     </>
@@ -40,6 +42,7 @@ const ExampleSelector = () => {
       <Link to="list-view">List View</Link>
       <Link to="horizontal-scroller">Horizontal Scroller</Link>
       <Link to="image-gallery">Image Gallery</Link>
+      <Link to="ios-music-player">IOS Music Player</Link>
     </Wrapper>
   );
 };
